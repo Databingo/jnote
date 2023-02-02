@@ -4,7 +4,7 @@ A note terminal application based on a single JSON file.
 
 ## Support OS
 - Mac
-- Linuc
+- Linux
 
 ## Installation
 ```bash
@@ -18,7 +18,7 @@ jnote note.json
 Enter jnote, then press 'a' to create a new note opened by Vim, write your note then type ":wq" back to jnote, all your notes will be saved in note.json automatically.
 
 ## Other Keybinding
-Similiar as the original reposite tson except 'a' means add new node to root node.
+Similiar as the original repository `tson` except 'a' means add new node to root node.
 
 | Key    | description                    |
 |--------|--------------------------------|
@@ -30,10 +30,10 @@ Similiar as the original reposite tson except 'a' means add new node to root nod
 | e      | edit note by VIM               |
 | q      | quit jnote                     |
 
-Actually you can use jnote as a JSON editor, for more usage information you can check the original repository which is no longer be developed by his author.(https://github.com/skanehira/tson)
+Actually you can use jnote as a JSON editor, for more usage information you can check the original repository which is no longer be developed by the author.(https://github.com/skanehira/tson)
 
 ## About improvement
-Since the original repository was last committed at 2019.11.07, many dependences changed. I updated them and add a Text area for visition node's content.
+Since the original repository was last committed at 2019.11.07, many dependences changed. I updated them and add a Text area for the visitation of node's content.
 
 
 
