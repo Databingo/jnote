@@ -1,6 +1,6 @@
 # jnote
 A note terminal application based on a single JSON file.
-![screenshot](jnote.png)
+![screenshot](jnote.gif)
 
 ## Support OS
 - Mac
