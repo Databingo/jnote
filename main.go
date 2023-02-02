@@ -699,7 +699,7 @@ func (t *Tree) SetKeybindings(g *Gui) {
                 case ' ':
 		        current := t.GetCurrentNode()
 			current.SetExpanded(!current.IsExpanded())
-                case 'e':
+                case 'i':
 			g.EditWithEditor(t)
 			//t.GetCurrentNode().ClearChildren()
 			//node_this := t.GetCurrentNode()

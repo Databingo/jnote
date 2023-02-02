@@ -27,7 +27,7 @@ Similiar as the original repository `tson` except 'a' means add new node to root
 | / or f | search                         |
 | j      | move down                      |
 | k      | move up                        |
-| e      | edit note by VIM               |
+| i      | edit note by VIM               |
 | q      | quit jnote                     |
 
 Actually you can use jnote as a JSON editor, for more usage information you can check the original repository which is no longer be developed by the author.(https://github.com/skanehira/tson)
