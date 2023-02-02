@@ -279,7 +279,7 @@ func (g *Gui) Save_json_2() {
 	enc.Encode(g.MakeJSON(&root))
 
 	ioutil.WriteFile(os.Args[1], buf.Bytes(), 0666)
-	log.Println("saved\r\n")
+//	log.Println("saved\r\n")
 }
 
 func (g *Gui) DeleteNode() {
