@@ -23,7 +23,7 @@ Similiar as the original repository `tson` except 'a' means add new node to root
 | Key    | description                    |
 |--------|--------------------------------|
 | a      | add new note                   |
-| d      | delete a note                  |
+| D      | delete a note                  |
 | / or f | search                         |
 | j      | move down                      |
 | k      | move up                        |

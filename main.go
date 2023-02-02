@@ -694,7 +694,7 @@ func (t *Tree) SetKeybindings(g *Gui) {
 		case 'A':
 			g.AddNode()// serious add json format objects
 			g.Save_json_2()
-		case 'd':
+		case 'D':
 			g.DeleteNode()
                 case ' ':
 		        current := t.GetCurrentNode()
