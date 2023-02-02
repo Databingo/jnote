@@ -5,7 +5,7 @@ A note terminal application based on a single JSON file.
 - Mac
 - Linuc
 
-##Installation
+## Installation
 ```bash
 $ git clone https://github.com/Databingo/jnote
 $ cd jnote && go install
