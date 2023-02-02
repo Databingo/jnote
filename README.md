@@ -32,7 +32,7 @@ Similiar as the original reposite tson except 'a' means add new node to root nod
 Actually you can use jnote as a JSON editor, for more usage information you can check the original repository which is no longer be developed by his author.(https://github.com/skanehira/tson)
 
 ## About improvement
-Since the original reppsitory was last committed at 2019.11.07, many depedences changed. I updated them and add a Text area for visition node's content.
+Since the original repository was last committed at 2019.11.07, many dependences changed. I updated them and add a Text area for visition node's content.
 
 
 
