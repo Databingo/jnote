@@ -699,8 +699,8 @@ func (t *Tree) SetKeybindings(g *Gui) {
                 case ' ':
 		        current := t.GetCurrentNode()
 			current.SetExpanded(!current.IsExpanded())
-                case 'i':
-			g.EditWithEditor(t)
+        //      case 'i':
+	//		g.EditWithEditor(t)
 			//t.GetCurrentNode().ClearChildren()
 			//node_this := t.GetCurrentNode()
 			//id := node_this.GetReference().(Reference).ID
@@ -732,8 +732,8 @@ func (t *Tree) SetKeybindings(g *Gui) {
 			t.moveNode(moveNext)
 		case tcell.KeyCtrlK:
 			t.moveNode(movePre)
-	//	case tcell.KeyEnter:
-	//		g.EditWithEditor(t)
+		case tcell.KeyEnter:
+			g.EditWithEditor(t)
 		}
 		return event
 	})
