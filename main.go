@@ -533,7 +533,8 @@ func (g *Gui) EditWithEditor(t *Tree) {
 		var args []string
 		//var sch = fmt.Sprintf("/%s", text)
 		if editor == "vim" {
-			args = append(args, []string{"-c", "set ft=json", f.Name()}...)
+			//args = append(args, []string{"-c", "set ft=json", f.Name()}...)
+			args = append(args, []string{f.Name()}...)
 			//args = append(args, []string{"-c", sch, f.Name()}...)
 		}
 		cmd := exec.Command(editor, args...)
