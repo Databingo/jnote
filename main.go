@@ -279,7 +279,7 @@ func (g *Gui) Save_json_2() {
 	enc.Encode(g.MakeJSON(&root))
 
 	ioutil.WriteFile(os.Args[1], buf.Bytes(), 0666)
-//	log.Println("saved\r\n")
+	// log.Println("saved\r\n")
 }
 
 func (g *Gui) DeleteNode() {
@@ -307,7 +307,7 @@ func (g *Gui) DeleteNode() {
 
 			return true
 		}
-			return true
+		return true
 	})
 }
 
@@ -538,6 +538,29 @@ func (g *Gui) EditWithEditor(t *Tree) {
 			//args = append(args, []string{"-c", sch, f.Name()}...)
 		}
 		cmd := exec.Command(editor, args...)
+		// auto save vim every 5 seconds
+		go func() {
+			for range time.Tick(time.Second * 5) {
+
+				b_edited, _ := ioutil.ReadFile(f.Name())
+				texted := string(b_edited[:])
+				texted = strings.TrimSuffix(texted, "\n")
+
+				tr := t.GetCurrentNode()
+				tr.SetText(texted)
+
+				ref := tr.GetReference().(Reference)
+				ref.ValueType = parseValueType(texted)
+				tr.SetReference(ref)
+
+				// just for show change
+				g.Text.SetText(texted)
+
+				//g.Save_json()
+				g.Save_json_2()
+			}
+		}()
+
 		ptmx, err := pty.Start(cmd)
 		if err != nil {
 			log.Println("open $EDITOR failed")
@@ -592,6 +615,7 @@ func (g *Gui) EditWithEditor(t *Tree) {
 		//		//	g.Message(err.Error(), "main", func() {})
 		//		return
 		//	}
+
 		b_edited, err := ioutil.ReadFile(f.Name())
 		texted := string(b_edited[:])
 		texted = strings.TrimSuffix(texted, "\n")
@@ -690,18 +714,18 @@ func (t *Tree) SetKeybindings(g *Gui) {
 		case 'k':
 			t.ShowTextUp(g)
 		case 'a':
-			g.AddNode_2()//add {"datetime":""} to root & open value by vim
+			g.AddNode_2() //add {"datetime":""} to root & open value by vim
 			g.Save_json_2()
 		case 'A':
-			g.AddNode()// serious add json format objects
+			g.AddNode() // serious add json format objects
 			g.Save_json_2()
 		case 'D':
 			g.DeleteNode()
-                case ' ':
-		        current := t.GetCurrentNode()
+		case ' ':
+			current := t.GetCurrentNode()
 			current.SetExpanded(!current.IsExpanded())
-        //      case 'i':
-	//		g.EditWithEditor(t)
+			//      case 'i':
+			//		g.EditWithEditor(t)
 			//t.GetCurrentNode().ClearChildren()
 			//node_this := t.GetCurrentNode()
 			//id := node_this.GetReference().(Reference).ID
