@@ -539,27 +539,27 @@ func (g *Gui) EditWithEditor(t *Tree) {
 		}
 		cmd := exec.Command(editor, args...)
 		// auto save vim every 5 seconds
-		go func() {
-			for range time.Tick(time.Second * 5) {
+		//go func() {
+		//	for range time.Tick(time.Second * 5) {
 
-				b_edited, _ := ioutil.ReadFile(f.Name())
-				texted := string(b_edited[:])
-				texted = strings.TrimSuffix(texted, "\n")
+		//		b_edited, _ := ioutil.ReadFile(f.Name())
+		//		texted := string(b_edited[:])
+		//		texted = strings.TrimSuffix(texted, "\n")
 
-				tr := t.GetCurrentNode()
-				tr.SetText(texted)
+		//		tr := t.GetCurrentNode()
+		//		tr.SetText(texted)
 
-				ref := tr.GetReference().(Reference)
-				ref.ValueType = parseValueType(texted)
-				tr.SetReference(ref)
+		//		ref := tr.GetReference().(Reference)
+		//		ref.ValueType = parseValueType(texted)
+		//		tr.SetReference(ref)
 
-				// just for show change
-				g.Text.SetText(texted)
+		//		// just for show change
+		//		g.Text.SetText(texted)
 
-				//g.Save_json()
-				g.Save_json_2()
-			}
-		}()
+		//		//g.Save_json()
+		//		g.Save_json_2()
+		//	}
+		//}()
 
 		ptmx, err := pty.Start(cmd)
 		if err != nil {
