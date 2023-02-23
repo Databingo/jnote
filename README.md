@@ -33,8 +33,10 @@ Similiar as the original repository `tson` except 'a' means add new node to root
 Actually you can use jnote as a JSON editor, for more usage information you can check the original repository which is no longer be developed by the author.(https://github.com/skanehira/tson)
 
 ## Todo
-1. Set current node when use G or gg 
+1. Set current node when use G or gg.
 2. Order records according created time when build nodes tree.
+3. Tidy code.
+4. Auto save vim content to file per 5 seconds & escape loop when exit from edition (immediately).
 
 
 ## About improvement
