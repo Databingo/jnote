@@ -32,6 +32,11 @@ Similiar as the original repository `tson` except 'a' means add new node to root
 
 Actually you can use jnote as a JSON editor, for more usage information you can check the original repository which is no longer be developed by the author.(https://github.com/skanehira/tson)
 
+## Todo
+1. Set current node when use G or gg 
+2. Order records according created time when build nodes tree.
+
+
 ## About improvement
 Since the original repository was last committed at 2019.11.07, many dependences changed. I updated them and add a Text area for the visitation of node's content.
 
