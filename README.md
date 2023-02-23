@@ -1,5 +1,4 @@
-# jnote
-A note terminal application based on a single JSON file.
+# jnote: A note terminal application based on a single JSON file.
 ![screenshot](jnote.gif)
 
 ## Support OS
