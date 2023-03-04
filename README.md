@@ -37,7 +37,7 @@ Actually you can use jnote as a JSON editor, for more usage information you can 
 
 ## Todo
 1. Set current node when use G or gg.
-2. ~~Order records according created time when build nodes tree.(Done)~~
+2. ~~Order records according created time descending when build nodes tree.(Done)~~
 3. Tidy code.
 4. Auto save vim content to file per 5 seconds & escape loop when exit from edition (immediately).
 5. Set current node as up simbling node after delete node in notes (and in search result?).

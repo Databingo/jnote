@@ -851,7 +851,8 @@ func (t *Tree) AddNode(node interface{}) []*tview.TreeNode {
 		for k := range node {
 		 keys = append(keys, k)
 		}
-		sort.Strings(keys)
+		//sort.Strings(keys)
+		sort.Sort(sort.Reverse(sort.StringSlice(keys)))
 
 		//for k, v := range node {
 		for _, k := range keys {
