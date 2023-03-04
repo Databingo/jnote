@@ -846,7 +846,8 @@ func (t *Tree) AddNode(node interface{}) []*tview.TreeNode {
 	// deal with object
 	case map[string]interface{}:
 	        keys := make([]string, 0, len(node))
-
+                
+		// sort map by k
 		for k := range node {
 		 keys = append(keys, k)
 		}
