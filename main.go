@@ -23,6 +23,7 @@ import (
 	"strings"
 	"syscall"
 	"time"
+	"sort"
 )
 
 const (
@@ -844,12 +845,22 @@ func (t *Tree) AddNode(node interface{}) []*tview.TreeNode {
 	switch node := node.(type) {
 	// deal with object
 	case map[string]interface{}:
-		for k, v := range node {
+	        keys := make([]string, 0, len(node))
+
+		for k := range node {
+		 keys = append(keys, k)
+		}
+		sort.Strings(keys)
+
+		//for k, v := range node {
+		for _, k := range keys {
 			newNode := t.NewNodeWithLiteral(k).
 				SetColor(tcell.ColorMediumSlateBlue). // key show color blue?
-				SetChildren(t.AddNode(v))             // add children to per Node's SetChilren()
+				//SetChildren(t.AddNode(v))             // add children to per Node's SetChilren()
+				SetChildren(t.AddNode(node[k]))             // add children to per Node's SetChilren()
 
-			r := reflect.ValueOf(v)
+			//r := reflect.ValueOf(v)
+			r := reflect.ValueOf(node[k])
 			id := uuid.Must(uuid.NewV4()).String()
 			if r.Kind() == reflect.Map {
 				newNode.SetReference(Reference{ID: id, JSONType: Object, KeyPart: true})
