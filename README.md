@@ -2,7 +2,7 @@
 
 ## Introduce
 Only for easily create/search/modify notes (in a single JSON file).
-![screenshot](jnote.gif)
+![screenshot](jnote2.gif)
 
 ## Support OS
 - Mac
