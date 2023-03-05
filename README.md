@@ -1,7 +1,7 @@
 # jnote 
 
 ## Introduce
-**Only for easily create/search/modify notes (in a single JSON file).**
+Only for easily create/search/modify notes (in a single JSON file).
 ![screenshot](jnote.gif)
 
 ## Support OS
@@ -19,10 +19,6 @@ jnote note.json
 ```
 Enter jnote, then press 'a' to create a new note opened by Vim, write your note then type ":wq" back to jnote, all your notes will be saved in note.json automatically.
 
-## Suggestions
-1. Add ```alias jn = "jnote note.jon"``` to .bashrc for easy use.
-2. Use [transcrypt](https://github.com/elasticdog/transcrypt) to encrypt JSON then push to Github's private repository for notes' persistence.
-
 ## Other Keybinding
 Similiar as the original repository `tson` except 'a' means add new node to root node.
 
@@ -38,13 +34,16 @@ Similiar as the original repository `tson` except 'a' means add new node to root
 
 Actually you can use jnote as a JSON editor, for more usage information you can check the original repository which is no longer be developed by the author.(https://github.com/skanehira/tson)
 
+## Suggestions
+1. Add ```alias jn = "jnote note.jon"``` to .bashrc for easy use.
+2. Use [transcrypt](https://github.com/elasticdog/transcrypt) to encrypt JSON then push to Github's private repository for notes' persistence.
+
 ## Todo
 1. Set current node when use G or gg.
 2. ~~Order records according created time descending when build nodes tree.(Done)~~
 3. Tidy code.
 4. Auto save vim content to file per 5 seconds & escape loop when exit from edition (immediately).
 5. Set current node as up simbling node after delete node in notes (and in search result?).
-
 
 ## About improvement
 Since the original repository was last committed at 2019.11.07, many dependences changed. I updated them and add a Text area for the visitation of node's content.
