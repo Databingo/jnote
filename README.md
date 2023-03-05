@@ -1,9 +1,12 @@
 # jnote 
-**A note terminal application based on a single JSON file.**
 
-![screenshot](jnote.gif)
 ## Introduce
-I cannot bear to record my notes in huge text editors for a little piece of knowledge & saved them anywhere, so I made this application to easily & quickly create, save, and search notes from terminal in a single JSON file; I also use [transcrypt](https://github.com/elasticdog/transcrypt) to encrypt the file and then push it to Github's private repository, which seems just enough for dealing with making notes.
+Only for easily create/search/modify notes (in a single JSON file).
+![screenshot](jnote.gif)
+
+## Suggestions:
+1. Add ```alias jn = "jnote note.jon"``` to .bashrc for easy use.
+2. Use [transcrypt](https://github.com/elasticdog/transcrypt) to encrypt JSON then push to Github's private repository for notes' persistence.
 
 ## Support OS
 - Mac
