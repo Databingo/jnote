@@ -1,8 +1,8 @@
 # jnote 
+![screenshot](jnote.gif)
 
 ## Introduce
 Only for easily create/search/modify notes (in a single JSON file).
-![screenshot](jnote.gif)
 
 ## Suggestions:
 1. Add ```alias jn = "jnote note.jon"``` to .bashrc for easy use.
