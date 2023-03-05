@@ -1,12 +1,8 @@
 # jnote 
-![screenshot](jnote.gif)
 
 ## Introduce
-Only for easily create/search/modify notes (in a single JSON file).
-
-## Suggestions:
-1. Add ```alias jn = "jnote note.jon"``` to .bashrc for easy use.
-2. Use [transcrypt](https://github.com/elasticdog/transcrypt) to encrypt JSON then push to Github's private repository for notes' persistence.
+**Only for easily create/search/modify notes (in a single JSON file).**
+![screenshot](jnote.gif)
 
 ## Support OS
 - Mac
@@ -22,6 +18,10 @@ $ cd jnote && go install
 jnote note.json
 ```
 Enter jnote, then press 'a' to create a new note opened by Vim, write your note then type ":wq" back to jnote, all your notes will be saved in note.json automatically.
+
+## Suggestions
+1. Add ```alias jn = "jnote note.jon"``` to .bashrc for easy use.
+2. Use [transcrypt](https://github.com/elasticdog/transcrypt) to encrypt JSON then push to Github's private repository for notes' persistence.
 
 ## Other Keybinding
 Similiar as the original repository `tson` except 'a' means add new node to root node.
