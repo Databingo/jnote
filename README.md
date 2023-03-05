@@ -35,7 +35,7 @@ Similiar as the original repository `tson` except 'a' means add new node to root
 Actually you can use jnote as a JSON editor, for more usage information you can check the original repository which is no longer be developed by the author.(https://github.com/skanehira/tson)
 
 ## Suggestions
-1. Add ```alias jn = "jnote note.jon"``` to .bashrc for easy use.
+1. Add ```alias jn="jnote note.json"``` to .bashrc for easy use.
 2. Use [transcrypt](https://github.com/elasticdog/transcrypt) to encrypt JSON then push to Github's private repository for notes' persistence.
 
 ## Todo
