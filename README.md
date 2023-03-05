@@ -45,6 +45,7 @@ Actually you can use jnote as a JSON editor, for more usage information you can 
 4. Auto save vim content to file per 5 seconds & escape loop when exit from edition (immediately).
 5. Set current node as up simbling node after delete node in notes (and in search result?).
 6. Fix one more click needness after back from edition.
+7. Deal with syscall.SIGWINCH so could use on windows?
 
 ## About improvement
 Since the original repository was last committed at 2019.11.07, many dependences changed. I updated them and add a Text area for the visitation of node's content.
