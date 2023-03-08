@@ -12,6 +12,7 @@ import (
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 	"golang.org/x/crypto/ssh/terminal"
+	"github.com/micmonay/keybd_event"
 	"io"
 	"io/ioutil"
 	"log"
@@ -547,6 +548,17 @@ func (g *Gui) EditWithEditor(t *Tree) {
 			log.Println("open $EDITOR failed")
 			return
 		}
+		defer func() { 
+	                t.Move(-1).GetCurrentNode()
+	                t.Move(+1).GetCurrentNode()
+		        t.SetCurrentNode(t.GetCurrentNode())
+			//uiBugFix, fix keystroke losing after exit edition
+			kb, err := keybd_event.NewKeyBonding()
+			if err != nil { return }
+			kb.SetKeys(keybd_event.VK_SPACE)
+			kb.Launching()
+		       }()
+
 		defer func() {
 			if err := ptmx.Close(); err != nil {
 				log.Println("can't close pty: %s", err)
@@ -612,9 +624,9 @@ func (g *Gui) EditWithEditor(t *Tree) {
 		g.Text.SetText(texted)
 
 		//g.Save_json()
-		g.Save_json_2()
 		os.RemoveAll(f.Name())
-		//	g.Tree.UpdateView(g, i)
+		g.Save_json_2()
+		//g.Tree.UpdateView(g, i)
 		//---------------------
 	})
 }

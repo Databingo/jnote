@@ -11,7 +11,7 @@ Only for easily create/search/modify notes (in a single JSON file).
 ## Installation
 ```bash
 $ git clone https://github.com/Databingo/jnote
-$ cd jnote && go install
+$ cd jnote && CGO_ENABLED=1 go install
 ```
 ## Usage
 ```bash

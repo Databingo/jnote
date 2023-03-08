@@ -1,0 +1,23 @@
+ * Using credentials: ashahChen
+ * Serving Flask app "grip.app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://localhost:5973/ (Press CTRL+C to quit)
+127.0.0.1 - - [05/Mar/2023 21:22:00] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Mar/2023 21:22:00] "[37mGET /__/grip/asset/github-9f1009c5473fcfa407b651513175cb55.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Mar/2023 21:22:00] "[37mGET /__/grip/asset/frameworks-02a3eaa24db2bd1ed9b64450595fc2cf.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Mar/2023 21:22:00] "[37mGET /__/grip/asset/site-889ba3896abfbcb8742b625020c44299.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Mar/2023 21:22:00] "[37mGET /__/grip/static/octicons/octicons.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Mar/2023 21:22:01] "[37mGET /jnote2.gif HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Mar/2023 21:22:01] "[37mGET /__/grip/static/favicon.ico HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Mar/2023 21:22:01] "[37mGET /__/grip/static/octicons/octicons.woff2?ef21c39f0ca9b1b5116e5eb7ac5eabe6 HTTP/1.1[0m" 200 -
+ * Using credentials: ashahChen
+ * Serving Flask app "grip.app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://localhost:3781/ (Press CTRL+C to quit)
+127.0.0.1 - - [05/Mar/2023 21:23:07] "[37mGET / HTTP/1.1[0m" 200 -
